@@ -65,6 +65,9 @@ func arToRome(res int) string {
 
 func calculate(str string) string {
 	arr := strings.Split(str, " ")
+	if len(arr) > 3 {
+		panic("операция возможна только над двумя числами")
+	}
 	v1, b := parseValue(arr[0])
 	v2, b2 := parseValue(arr[2])
 	if b != b2 {
